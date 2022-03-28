@@ -1,0 +1,36 @@
+
+.nav-button {
+   text-align:center;
+   text-decoration:none;
+   font-family: 'Reenie Beanie', cursive;
+   color:#111112;
+   padding:12px;
+   margin:18px;
+   transition: 0.3s;
+   opacity:0.7;
+   backface-visibility: hidden;
+   transform: translateZ(0) scale(1, 1);
+   -webkit-backface-visibility: hidden;
+   -webkit-transform: translateZ(0) scale(1, 1);
+}
+.nav-button:hover {
+   color:#111112;
+   opacity:1;
+   cursor:pointer;
+}
+.nav-bar {
+   text-align:center;
+   width:100%;
+   display:flex;
+   align-items: center;
+}
+.nav-button:after {
+   display:block;
+   content: '';
+   border-bottom: solid 3px #b61c01;  
+   transform: scaleX(0);  
+   transition: transform 250ms ease-in-out;
+ }
+ .nav-button:hover:after { transform: scaleX(1); }
+ .nav-button.fromRight:after{ transform-origin:100% 50%; }
+ .nav-button.fromLeft:after{  transform-origin:  0% 50%; }
