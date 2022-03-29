@@ -5,17 +5,13 @@
    font-family: 'Reenie Beanie', cursive;
    color:#111112;
    padding:12px;
-   margin:18px;
-   transition: 0.3s;
-   opacity:0.7;
    backface-visibility: hidden;
-   transform: translateZ(0) scale(1, 1);
-   -webkit-backface-visibility: hidden;
-   -webkit-transform: translateZ(0) scale(1, 1);
+   transform: scale(1, 1);
+   transition: transform 0.6s;
 }
 .nav-button:hover {
+   transform: scale(1.2, 1.2);
    color:#111112;
-   opacity:1;
    cursor:pointer;
 }
 .nav-bar {
@@ -23,14 +19,24 @@
    width:100%;
    display:flex;
    align-items: center;
+   justify-content: space-between;
 }
 .nav-button:after {
    display:block;
    content: '';
-   border-bottom: solid 3px #b61c01;  
+   border-bottom: solid 3px #d83013;  
    transform: scaleX(0);  
    transition: transform 250ms ease-in-out;
  }
  .nav-button:hover:after { transform: scaleX(1); }
  .nav-button.fromRight:after{ transform-origin:100% 50%; }
- .nav-button.fromLeft:after{  transform-origin:  0% 50%; }
+ .nav-button.fromLeft:after{  transform-origin: 0% 50%; }
+
+ .transition-swup {
+   transition: 0.5s;
+   opacity:1;
+ }
+ 
+ html.is-animating .transition-swup {
+   opacity: 0;
+ }
