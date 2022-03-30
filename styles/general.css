@@ -14,7 +14,7 @@ p {
 }
 img {
    width:100%;
-   border-radius: 8px 8px 0 0;
+   border-radius: 2px 2px 0 0;
 }
 td {
    text-align:center;
@@ -22,21 +22,21 @@ td {
 /* USE P FOR EVEYTHING JUST CHANGE FONT, COLOR, AND SIZE IN THESE DIFFERENT CLASSES */
 .xlh {
    font-family: 'Palette Mosaic', cursive;
-   font-size:70px;
+   font-size:80px;
    text-align: left;
    margin:0;
    /* word-spacing: -12px;
    letter-spacing:-4px; */
 }
 .lh {
-   font-family: 'Alata', sans-serif;
-   font-size: 40px;
+   font-family: 'Palette Mosaic', cursive;
+   font-size: 46px;
    text-align: left;
    margin:0;
 }
 .h {
    font-family: 'Alata', sans-serif;
-   font-size: 38px;
+   font-size: 40px;
    text-align: left;
    margin:0;
 }
@@ -82,4 +82,10 @@ td {
    left: 50%;
    width:fit-content;
    transform: translate(-50%, -50%);
+}
+.centered-horizontally {
+   position: absolute;
+   right: 50%;
+   width:fit-content;   
+   transform: translate(50%, 0);
 }
